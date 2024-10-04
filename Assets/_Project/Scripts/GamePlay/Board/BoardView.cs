@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class BoardView : MonoBehaviour
+namespace Project
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class BoardView : MonoBehaviour
     {
+        [SerializeField] private GridLayoutGroup _grid;
         
-    }
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            _grid ??= GetComponentInChildren<GridLayoutGroup>();
+        }
+#endif
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Configure(int cardCount)
+        {
+            
+        }
+
+        public void AddCard(CardView cardView)
+        {
+            cardView.transform.SetParent(transform, false);
+        }
     }
 }
