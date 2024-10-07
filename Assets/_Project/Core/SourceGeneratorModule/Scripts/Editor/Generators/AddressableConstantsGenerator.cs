@@ -17,6 +17,7 @@ namespace Project.Core.SourceGeneratorModule.Editor
         private const string BUILT_IN_DATA_GROUP_NAME = "BuiltInData";
         private const string DUPLICATE_ASSET_GROUP_NAME = "DuplicateAssetIsolation";
         private const string ALL_KEYS_FIELD_NAME = "AllKeys";
+        private const string ALL_SCENE_KEYS_FIELD_NAME = "AllSceneKeys";
 
         public void Execute(GeneratorContext context)
         {
@@ -33,14 +34,20 @@ namespace Project.Core.SourceGeneratorModule.Editor
                 .SetStatic()
                 .SetListType("string")
                 .SetName(ALL_KEYS_FIELD_NAME);
+            
+            var allSceneKeysFieldInstance = new FieldInstance().SetPublic()
+                .SetStatic()
+                .SetListType("string")
+                .SetName(ALL_SCENE_KEYS_FIELD_NAME);
 
             var mainClassAllKeys = new List<string>();
+            var allScenesKeys = new List<string>();
 
             foreach (var addressableAssetGroup in settings.groups) 
             {
                 string groupName = GetGroupName(addressableAssetGroup);
                 
-                if(GroupIsSuitableForGenerating(groupName) is false)
+                if (GroupIsSuitableForGenerating(groupName) is false)
                     return;
                 
                 var groupClassAllKeys = new List<string>();
@@ -57,6 +64,9 @@ namespace Project.Core.SourceGeneratorModule.Editor
                     mainClassAllKeys.Add(assetKey);
                     groupClassAllKeys.Add(assetKey);
                     
+                    if (addressableAssetEntry.IsScene)
+                        allScenesKeys.Add(assetKey);
+                    
                     addressableClass.AddField(new FieldInstance()
                         .SetPublic()
                         .SetConst()
@@ -67,14 +77,15 @@ namespace Project.Core.SourceGeneratorModule.Editor
                 }
 
                 mainClassInstance.AddClass(addressableClass);
-                if (groupClassAllKeys.Any())
-                    addressableClass.AddField(allKeysFieldInstance.Copy()
-                        .SetAssignedValue(GetAssignedValueForStringList(groupClassAllKeys, 3)));
+                addressableClass.AddField(allKeysFieldInstance.Copy()
+                    .SetAssignedValue(GetAssignedValueForStringList(groupClassAllKeys, 3)));
             }
             
-            if (mainClassAllKeys.Any())
-                mainClassInstance.AddField(allKeysFieldInstance.Copy()
-                    .SetAssignedValue(GetAssignedValueForStringList(mainClassAllKeys, 2)));
+            mainClassInstance.AddField(allKeysFieldInstance.Copy()
+                .SetAssignedValue(GetAssignedValueForStringList(mainClassAllKeys, 2)));
+            
+            mainClassInstance.AddField(allSceneKeysFieldInstance.Copy()
+                .SetAssignedValue(GetAssignedValueForStringList(allScenesKeys, 2)));
             
             context.OverrideFolderPath(GeneratorConstants.ContentFilePath);
             context.AddFile(FILE_NAME + GeneratorConstants.GeneratedFileEnding, mainClassInstance.GetString());

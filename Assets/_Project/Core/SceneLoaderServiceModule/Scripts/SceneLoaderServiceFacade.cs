@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using Project.Generated;
 using UnityEngine.SceneManagement;
 
 namespace Project.Core.SceneLoaderServiceModule 
@@ -15,14 +16,14 @@ namespace Project.Core.SceneLoaderServiceModule
         }
     
         public async UniTask LoadSceneAsync(string sceneToLoad, bool unloadRedundant) {
-            if (Address.Scenes.AllKeys.Contains(sceneToLoad))
+            if (Address.AllSceneKeys.Contains(sceneToLoad))
                 await _addressablesSceneLoaderService.LoadSceneAsync(sceneToLoad, unloadRedundant);
             else
                 await _buildInSceneLoaderService.LoadSceneAsync(sceneToLoad, unloadRedundant);
         }
         
         public async UniTask LoadScenesAsync(List<string> scenesToLoad, string activeScene, bool unloadRedundant) {
-            List<string> scenesNotInAddressables = scenesToLoad.Except(Address.Scenes.AllKeys).ToList();
+            var scenesNotInAddressables = scenesToLoad.Except(Address.AllSceneKeys).ToList();
 
             if (scenesNotInAddressables.Any() is false) {
                 await _addressablesSceneLoaderService.LoadScenesAsync(scenesToLoad, unloadRedundant);
@@ -50,14 +51,14 @@ namespace Project.Core.SceneLoaderServiceModule
         }
 
         public async UniTask UnloadSceneAsync(string sceneToUnload) {
-            if (Address.Scenes.AllKeys.Contains(sceneToUnload))
+            if (Address.AllSceneKeys.Contains(sceneToUnload))
                 await _addressablesSceneLoaderService.UnloadSceneAsync(sceneToUnload);
             else
                 await _buildInSceneLoaderService.UnloadSceneAsync(sceneToUnload);
         }
 
         public async UniTask UnloadScenesAsync(List<string> scenesToUnload) {
-            List<string> scenesNotInAddressables = scenesToUnload.Except(Address.Scenes.AllKeys)
+            var scenesNotInAddressables = scenesToUnload.Except(Address.AllSceneKeys)
                 .ToList();
 
             if (scenesNotInAddressables.Any() is false) {
@@ -73,13 +74,6 @@ namespace Project.Core.SceneLoaderServiceModule
             await _buildInSceneLoaderService.UnloadScenesAsync(scenesNotInAddressables);
             await _addressablesSceneLoaderService.UnloadScenesAsync(scenesToUnload.Except(scenesNotInAddressables)
                 .ToList());
-        }
-    }
-    public class Address
-    {
-        public class Scenes
-        {
-            public static List<string> AllKeys = new();
         }
     }
 }
