@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Group Test
   m_GUID: 5803b599f3fd6724f91e6905d6ad685b
-  m_SerializeEntries:
-  - m_GUID: eb641571393ceac4da4855f3790bbbea
-    m_Address: Assets/_Project/Content/Global/Scenes/SampleScene 1.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 19e9c80b13b22024881e0644fde9612c, type: 2}
   m_SchemaSet:
