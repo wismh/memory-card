@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -10.000122, y: 0}
   m_SizeDelta: {x: -180, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8737129025563954611
@@ -57,8 +57,8 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 120, y: 120}
-  m_Spacing: {x: 10, y: 50}
+  m_CellSize: {x: 260, y: 350}
+  m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!114 &1010137044867252546
@@ -73,3 +73,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83aab51bda8e3e941ad4e8e196168b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoardView
+  _grid: {fileID: 8737129025563954611}
+  _configurations:
+  - MaxCards: 12
+    CardSize: {x: 247, y: 337}
+    Spacing: 30
+  - MaxCards: 16
+    CardSize: {x: 185, y: 252}
+    Spacing: 15
+  - MaxCards: 33
+    CardSize: {x: 148, y: 201}
+    Spacing: 10

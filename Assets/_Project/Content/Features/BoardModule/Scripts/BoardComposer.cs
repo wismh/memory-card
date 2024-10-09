@@ -15,14 +15,15 @@ namespace Project.Features.BoardModule
 
         public void Compose()
         {
-            const int cardCount = 12;
-            _boardView.Configure(cardCount);
+            const int cardCount = 14;
 
             for (int i = 0; i < cardCount; ++i)
             {
                 var card = _cardFactory.Create();
                 _boardView.AddCard(card);
             }
+            
+            _boardView.Configure(cardCount);
         }
     }
 }
