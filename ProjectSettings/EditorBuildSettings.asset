@@ -12,7 +12,10 @@ EditorBuildSettings:
     path: Assets/_Project/Content/Global/Scenes/GlobalScene.unity
     guid: c80d28153e9db2341bdd083973cdb4ab
   - enabled: 1
-    path: Assets/_Project/Content/Global/Scenes/SampleScene.unity
+    path: Assets/_Project/Content/Global/Scenes/MenuScene.unity
+    guid: e247b92055a8754469157d5041608cbc
+  - enabled: 1
+    path: Assets/_Project/Content/Global/Scenes/RoundScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 58ff0bcdb1a79684f967318fb1fbe70a, type: 2}

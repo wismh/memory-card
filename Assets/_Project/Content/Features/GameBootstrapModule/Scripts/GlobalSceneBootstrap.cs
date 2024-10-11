@@ -13,6 +13,6 @@ namespace Project.Features.GameBootstrapModule
             _gameFlowStateMachine = gameFlowStateMachine;
 
         private void Start() =>
-            _gameFlowStateMachine.Enter<StartRoundFlowState>();
+            _gameFlowStateMachine.Enter<GoMenuFlowState>();
     }
 }

@@ -14,6 +14,9 @@ namespace Project.Features.GameFlowStateMachineModule
             
             Container.Bind<StartRoundFlowState>()
                 .AsSingle();
+
+            Container.Bind<GoMenuFlowState>()
+                .AsSingle();
         }
     }
 }

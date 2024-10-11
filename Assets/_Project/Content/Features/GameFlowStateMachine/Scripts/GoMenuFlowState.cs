@@ -1,24 +1,23 @@
 ﻿using System.Collections.Generic;
 using Project.Core.SceneLoaderServiceModule;
 using Project.Generated;
-
 namespace Project.Features.GameFlowStateMachineModule
 {
-    public class StartRoundFlowState : GameFlowStateBase
+    public class GoMenuFlowState : GameFlowStateBase
     {
         private readonly ISceneLoaderService _sceneLoaderService;
 
-        public StartRoundFlowState(ISceneLoaderService sceneLoaderService) =>
+        public GoMenuFlowState(ISceneLoaderService sceneLoaderService) =>
             _sceneLoaderService = sceneLoaderService;
 
         public override void Enter() {
             var enabledScenes = new List<string>
             {
                 SceneInBuild.GlobalScene, 
-                SceneInBuild.RoundScene
+                SceneInBuild.MenuScene
             };
                 
-            _sceneLoaderService.LoadScenesAsync(enabledScenes, SceneInBuild.RoundScene, true);    
+            _sceneLoaderService.LoadScenesAsync(enabledScenes, SceneInBuild.MenuScene, true);    
         }
 
         public override void Exit() { }
