@@ -13,10 +13,8 @@ namespace Project.Features.BoardModule
             _cardFactory = cardFactory;
         }
 
-        public void Compose()
+        public void Compose(int cardCount)
         {
-            const int cardCount = 14;
-
             for (int i = 0; i < cardCount; ++i)
             {
                 var card = _cardFactory.Create();

@@ -12,13 +12,13 @@ namespace Project.Core.SceneLoaderServiceModule
         
         public async UniTask LoadSceneAsync(string sceneToLoad, bool unloadRedundant)
         {
-            if(_loadedScenes.Contains(sceneToLoad))
+            if (_loadedScenes.Contains(sceneToLoad))
                 return;
             
             LoadSceneMode loadSceneMode = unloadRedundant == false
                 ? LoadSceneMode.Additive
                 : LoadSceneMode.Single;
-
+            
             await SceneManager.LoadSceneAsync(sceneToLoad, loadSceneMode);
             _loadedScenes.Add(sceneToLoad);
         }

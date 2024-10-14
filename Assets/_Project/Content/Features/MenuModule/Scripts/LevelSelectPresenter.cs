@@ -3,6 +3,7 @@ using UnityEngine;
 using Zenject;
 
 using Project.Features.GameFlowStateMachineModule;
+using Project.Features.LevelsModule;
 
 namespace Project.Features.MenuModule
 {
@@ -11,11 +12,18 @@ namespace Project.Features.MenuModule
         [SerializeField] private List<LevelSelectView> _levelSelectViews;
 
         private GameFlowStateMachine _gameFlowStateMachine;
+        private LevelContext _levelContext;
+        private LevelsDb _levelsDb;
 
         [Inject]
-        public void InjectDependencies(GameFlowStateMachine gameFlowStateMachine)
+        public void InjectDependencies(GameFlowStateMachine gameFlowStateMachine,
+                                       LevelContext levelContext,
+                                       LevelsDb levelsDb
+            )
         {
             _gameFlowStateMachine = gameFlowStateMachine;
+            _levelContext = levelContext;
+            _levelsDb = levelsDb;
         }
         
         private void Start()
@@ -32,6 +40,7 @@ namespace Project.Features.MenuModule
 
         private void HandleLevelSelect(int levelIndex)
         {
+            _levelContext.LevelConfig = _levelsDb.LevelConfigs[levelIndex];
             _gameFlowStateMachine.Enter<StartRoundFlowState>();   
         }
     }
