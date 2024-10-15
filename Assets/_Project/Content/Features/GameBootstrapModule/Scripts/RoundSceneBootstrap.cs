@@ -12,7 +12,8 @@ namespace Project.Features.GameBootstrapModule
         private LevelContext _levelContext;
         
         [Inject]
-        public void InjectDependencies(BoardComposer boardComposer, LevelContext levelContext)
+        public void InjectDependencies(BoardComposer boardComposer,
+                                       LevelContext levelContext)
         {
             _boardComposer = boardComposer;
             _levelContext = levelContext;
@@ -21,6 +22,7 @@ namespace Project.Features.GameBootstrapModule
         private void Start()
         {
             _boardComposer.Compose(_levelContext.LevelConfig.CardCount);
+            _levelContext.LevelStartTime = Time.time;
         }
     }
 }

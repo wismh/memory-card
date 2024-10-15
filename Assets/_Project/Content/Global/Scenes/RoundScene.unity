@@ -267,6 +267,8 @@ GameObject:
   - component: {fileID: 149476555}
   - component: {fileID: 149476557}
   - component: {fileID: 149476556}
+  - component: {fileID: 149476559}
+  - component: {fileID: 149476558}
   m_Layer: 5
   m_Name: TimerLabel
   m_TagString: Untagged
@@ -393,6 +395,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149476554}
   m_CullTransparentMesh: 1
+--- !u!114 &149476558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149476554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01858450283d4f479209a1b754f00a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.TimerPresenter
+  _timerView: {fileID: 149476559}
+--- !u!114 &149476559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149476554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eae025beb9e40da9b06e4369937bba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.TimerView
+  _timerLabel: {fileID: 149476556}
 --- !u!1 &367168893
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +498,7 @@ GameObject:
   - component: {fileID: 408408348}
   - component: {fileID: 408408350}
   - component: {fileID: 408408349}
+  - component: {fileID: 408408351}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -534,6 +563,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408408347}
   m_CullTransparentMesh: 1
+--- !u!114 &408408351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408408347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 408408349}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &427030783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617125012}
+  - component: {fileID: 1617125013}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -1556,6 +1630,19 @@ RectTransform:
   m_AnchoredPosition: {x: -877, y: 457}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1617125013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617125011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c614469ffa4e3b8e2dcd077b739a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.BackPresenter
+  _backButton: {fileID: 408408351}
 --- !u!1 &1685296552
 GameObject:
   m_ObjectHideFlags: 0
