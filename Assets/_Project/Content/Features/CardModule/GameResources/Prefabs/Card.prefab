@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4096997dbe606b34f95d8b84e0122e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.CardView
+  _image: {fileID: 7316526438837495778}
 --- !u!1 &7158005637999567088
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7024648501981196136, guid: 1eb6c962152e73c42a7437c55f3badfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
