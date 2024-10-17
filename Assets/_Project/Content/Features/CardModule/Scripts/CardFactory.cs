@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using UnityEngine;
+using Zenject;
 
 namespace Project.Features.CardModule
 {
@@ -13,9 +14,12 @@ namespace Project.Features.CardModule
             _prefab = prefab;
         }
 
-        public CardView Create()
+        public CardView Create(Sprite frontSideSprite)
         {
-            var card = _container.InstantiatePrefabForComponent<CardView>(_prefab);
+            var card = _container.InstantiatePrefabForComponent<CardView>(
+                _prefab, new object[]{ frontSideSprite }
+            );
+            
             return card;
         }
     }

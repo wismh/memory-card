@@ -1,3 +1,4 @@
+using Project.Core.AssetLoaderModule;
 using Project.Core.SceneLoaderServiceModule;
 using Project.Features.GameFlowStateMachineModule;
 using Project.Features.LevelsModule;
@@ -16,6 +17,7 @@ namespace Project.Features.GameBootstrapModule
             
             SceneLoaderServiceModuleInstaller.Install(Container);
             GameFlowStateMachineInstaller.Install(Container);
+            AssetLoaderInstaller.Install(Container);
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Project.Core.AssetLoaderModule;
+
+using Project.Generated;
+using UnityEngine;
 using Zenject;
 
 namespace Project.Features.CardModule
@@ -11,6 +14,17 @@ namespace Project.Features.CardModule
         
         public override void InstallBindings()
         {
+            var addressablesAssetLoaderService = Container.Resolve<IAddressablesAssetLoaderService>();
+            var clipFlipAnimationConfig = addressablesAssetLoaderService.LoadAsset<CardFlipAnimationConfig>(
+                Address.DefaultLocalGroup.CardFlipAnimationConfig
+            );
+
+            Container.Bind<CardFlipAnimationConfig>()
+                .FromInstance(clipFlipAnimationConfig)
+                .AsSingle();
+            
+            Container.Bind<CardFlipAnimator>()
+                .AsTransient();
             Container.Bind<CardFactory>()
                 .FromInstance(new CardFactory(Container, _cardPrefab));
         }
