@@ -21,7 +21,9 @@ namespace Project.Features.BoardModule
         [SerializeField] private List<ConfigurationView> _configurations;
         
         private readonly List<CardView> _cardViews = new();
-            
+
+        public event Action<CardView> OnCardClick = null;
+        
 #if UNITY_EDITOR
         private void OnValidate()
         {
@@ -43,6 +45,12 @@ namespace Project.Features.BoardModule
         {
             _cardViews.Add(cardView);
             cardView.transform.SetParent(transform, false);
+            cardView.AddListener(() => HandleCardClick(cardView));
+        }
+
+        private void HandleCardClick(CardView cardView)
+        {
+            OnCardClick?.Invoke(cardView);
         }
 
         private ConfigurationView GetConfiguration(int cardCount)

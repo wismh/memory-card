@@ -4,16 +4,19 @@ namespace Project.Generated {
     public static class Address { 
         public static List<string> AllKeys = new() {
             "BoardComposerConfig",
-            "CardFlipAnimationConfig",
+            "BoardPresenterConfig",
+            "CardViewConfig",
         }; 
         public static List<string> AllSceneKeys = new() {
         }; 
         public static class DefaultLocalGroup { 
             public const System.String BoardComposerConfig = "BoardComposerConfig"; 
-            public const System.String CardFlipAnimationConfig = "CardFlipAnimationConfig"; 
+            public const System.String BoardPresenterConfig = "BoardPresenterConfig"; 
+            public const System.String CardViewConfig = "CardViewConfig"; 
             public static List<string> AllKeys = new() {
                 "BoardComposerConfig",
-                "CardFlipAnimationConfig",
+                "BoardPresenterConfig",
+                "CardViewConfig",
             }; 
         } 
 

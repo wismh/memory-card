@@ -35,8 +35,8 @@ namespace Project.Features.BoardModule
             {
                 var type = shuffledTypes[i % shuffledTypes.Count];
                 
-                cards.Add(_cardFactory.Create(type.FrontSprite));
-                cards.Add(_cardFactory.Create(type.FrontSprite));
+                cards.Add(_cardFactory.Create(type));
+                cards.Add(_cardFactory.Create(type));
             }
 
             cards = cards

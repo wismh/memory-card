@@ -14,10 +14,10 @@ namespace Project.Features.CardModule
             _prefab = prefab;
         }
 
-        public CardView Create(Sprite frontSideSprite)
+        public CardView Create(CardType cardType)
         {
             var card = _container.InstantiatePrefabForComponent<CardView>(
-                _prefab, new object[]{ frontSideSprite }
+                _prefab, new object[]{ cardType }
             );
             
             return card;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e47904cc4d2b4429b52d7869230e679c, type: 3}
   m_Name: CardType_3
   m_EditorClassIdentifier: Assembly-CSharp::Project.Features.CardModule.CardType
-  <Id>k__BackingField: card_1
+  <Id>k__BackingField: card_3
   <FrontSprite>k__BackingField: {fileID: -7415955986125602904, guid: 1eb6c962152e73c42a7437c55f3badfe, type: 3}

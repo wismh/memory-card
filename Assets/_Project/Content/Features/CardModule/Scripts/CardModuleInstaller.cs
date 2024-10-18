@@ -15,16 +15,20 @@ namespace Project.Features.CardModule
         public override void InstallBindings()
         {
             var addressablesAssetLoaderService = Container.Resolve<IAddressablesAssetLoaderService>();
-            var clipFlipAnimationConfig = addressablesAssetLoaderService.LoadAsset<CardFlipAnimationConfig>(
-                Address.DefaultLocalGroup.CardFlipAnimationConfig
+            var clipFlipAnimationConfig = addressablesAssetLoaderService.LoadAsset<CardViewConfig>(
+                Address.DefaultLocalGroup.CardViewConfig
             );
 
-            Container.Bind<CardFlipAnimationConfig>()
+            Container.Bind<CardViewConfig>()
                 .FromInstance(clipFlipAnimationConfig)
                 .AsSingle();
             
             Container.Bind<CardFlipAnimator>()
                 .AsTransient();
+            
+            Container.Bind<CardModel>()
+                .AsTransient();
+            
             Container.Bind<CardFactory>()
                 .FromInstance(new CardFactory(Container, _cardPrefab));
         }

@@ -6,18 +6,10 @@ namespace Project.Features.CardModule
 {
     public class CardFlipAnimator
     {
-        private readonly CardFlipAnimationConfig _animationConfig;
-        
         private Image _image;
         private RectTransform _rectTransform;
-        
-        private bool _isFlipped;
+
         private Tween _tween;
-        
-        public CardFlipAnimator(CardFlipAnimationConfig animationConfig)
-        {
-            _animationConfig = animationConfig;
-        }
         
         public void SetImage(Image image)
         {
@@ -25,7 +17,7 @@ namespace Project.Features.CardModule
             _rectTransform = image.rectTransform;
         }
         
-        public void Flip(Sprite frontSideSprite)
+        public void Flip(Sprite sprite, float duration)
         {
             if (_rectTransform == null)
             {
@@ -34,30 +26,18 @@ namespace Project.Features.CardModule
             }
 
             _tween.Stop();
-            _isFlipped = !_isFlipped;
 
-            float halfDuration = _animationConfig.Duration * 0.5f;
+            float halfDuration = duration * 0.5f;
 
-            _tween = Tween.LocalRotation(
-                _rectTransform,
-                new Vector3(0f, 90f, 0f),
-                halfDuration,
-                Ease.InQuad
-            ).OnComplete(() =>
-            {
-                OnHalfFlip(frontSideSprite);
-
-                _tween = Tween.LocalRotation(
-                    _rectTransform,
-                    new Vector3(0f, 0f, 0f),
-                    halfDuration,
-                    Ease.OutQuad
-                );
-            });
-        }
-        private void OnHalfFlip(Sprite sprite)
-        {
-            _image.sprite = _isFlipped ? sprite : _animationConfig.BackSideSprite;
+            _tween = Tween
+                .ScaleX(_rectTransform, 0f, halfDuration, Ease.InQuad)
+                .OnComplete(() => 
+                {
+                    _image.sprite = sprite;
+                    _tween = Tween.ScaleX(
+                        _rectTransform, 1f, halfDuration, Ease.OutQuad
+                    );
+                });
         }
     }
 }

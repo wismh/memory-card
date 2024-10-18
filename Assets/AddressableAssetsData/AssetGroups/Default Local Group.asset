@@ -20,8 +20,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17656698b3e52f441ba85574ac8503bf
+    m_Address: BoardPresenterConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 319cf5aabd24fcb4190d51e6efd4a5d3
-    m_Address: CardFlipAnimationConfig
+    m_Address: CardViewConfig
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -7,10 +8,19 @@ namespace Project.Features.CardModule
 {
     public class CardView : MonoBehaviour, IPointerClickHandler
     {
+        public delegate void CardClickHandler();
+        
         [SerializeField] private Image _image;
 
+        private CardModel _cardModel;
         private CardFlipAnimator _cardFlipAnimator;
-        private Sprite _frontSideSprite;
+        private CardType _cardType;
+        private CardViewConfig _config;
+        
+        public CardType CardType => _cardType;
+        public CardModel CardModel => _cardModel;
+        
+        private event CardClickHandler OnClick;
         
 #if UNITY_EDITOR
         private void OnValidate()
@@ -21,9 +31,13 @@ namespace Project.Features.CardModule
         
         [Inject]
         public void InjectDependencies(CardFlipAnimator cardFlipAnimator, 
-                                       Sprite frontSpriteSide)
+                                       CardViewConfig config,
+                                       CardModel cardModel,
+                                       CardType cardType)
         {
-            _frontSideSprite = frontSpriteSide;
+            _config = config;
+            _cardType = cardType;
+            _cardModel = cardModel;
             _cardFlipAnimator = cardFlipAnimator;
             _cardFlipAnimator.SetImage(_image);
         }
@@ -33,14 +47,29 @@ namespace Project.Features.CardModule
             _image.rectTransform.sizeDelta = size;
         }
 
-        public void Flip()
+        public void Open()
         {
-            _cardFlipAnimator.Flip(_frontSideSprite);   
+            _cardFlipAnimator.Flip(_cardType.FrontSprite, _config.Duration); 
+        }
+
+        public void Close()
+        {
+            _cardFlipAnimator.Flip(_config.BackSideSprite, _config.Duration); 
         }
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            Flip();
+            OnClick?.Invoke();   
+        }
+
+        public void AddListener(CardClickHandler handler)
+        {
+            OnClick += handler;
+        }
+        
+        private void OnDestroy()
+        {
+            OnClick = null;
         }
     }
 }
