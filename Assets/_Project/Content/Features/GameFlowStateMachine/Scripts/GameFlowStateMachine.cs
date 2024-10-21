@@ -7,10 +7,12 @@ namespace Project.Features.GameFlowStateMachineModule
     {
         public GameFlowStateMachine(GlobalGameFlowState bootstrapGameFlowState,
                                     StartRoundFlowState startRoundFlowState,
+                                    RoundFlowState roundFlowState,
                                     GoMenuFlowState goMenuFlowState) =>
             SetStates(new List<GameFlowStateBase>() {
                 bootstrapGameFlowState, 
                 startRoundFlowState,
+                roundFlowState,
                 goMenuFlowState
             });
     }
