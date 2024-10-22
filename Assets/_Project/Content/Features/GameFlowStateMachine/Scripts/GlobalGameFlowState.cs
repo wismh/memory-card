@@ -1,9 +1,10 @@
 ﻿using Project.Core.SceneLoaderServiceModule;
+using Project.Core.StateMachineModule;
 using Project.Generated;
 
 namespace Project.Features.GameFlowStateMachineModule 
 {
-    public class GlobalGameFlowState : GameFlowStateBase
+    public class GlobalGameFlowState : StateBase
     {
         private readonly ISceneLoaderService _sceneLoaderService;
 

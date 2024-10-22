@@ -1,4 +1,5 @@
-namespace Project.Core.StateMachineModule {
+namespace Project.Core.StateMachineModule 
+{
     public abstract class StateBase
     {
         public abstract void Enter();

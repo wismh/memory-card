@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using Project.Core.SceneLoaderServiceModule;
+using Project.Core.StateMachineModule;
 using Project.Generated;
 namespace Project.Features.GameFlowStateMachineModule
 {
-    public class GoMenuFlowState : GameFlowStateBase
+    public class GoMenuFlowState : StateBase
     {
         private readonly ISceneLoaderService _sceneLoaderService;
 

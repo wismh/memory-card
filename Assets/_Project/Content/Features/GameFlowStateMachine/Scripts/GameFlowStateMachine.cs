@@ -3,17 +3,17 @@ using Project.Core.StateMachineModule;
 
 namespace Project.Features.GameFlowStateMachineModule
 {
-    public class GameFlowStateMachine : StateMachineBehaviour<GameFlowStateBase> 
+    public class GameFlowStateMachine : StateMachineBehaviour<StateBase> 
     {
         public GameFlowStateMachine(GlobalGameFlowState bootstrapGameFlowState,
                                     StartRoundFlowState startRoundFlowState,
-                                    RoundFlowState roundFlowState,
-                                    GoMenuFlowState goMenuFlowState) =>
-            SetStates(new List<GameFlowStateBase>() {
+                                    GoMenuFlowState goMenuFlowState, 
+                                    ReloadRoundFlowState reloadRoundFlowState) =>
+            SetStates(new List<StateBase>() {
                 bootstrapGameFlowState, 
                 startRoundFlowState,
-                roundFlowState,
-                goMenuFlowState
+                goMenuFlowState,
+                reloadRoundFlowState
             });
     }
 }

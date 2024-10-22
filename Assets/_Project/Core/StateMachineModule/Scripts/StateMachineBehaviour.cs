@@ -8,9 +8,6 @@ namespace Project.Core.StateMachineModule {
         protected TStateBase ActiveStateBase;
         protected Dictionary<Type, TStateBase> States;
         
-        public void SetStates(Dictionary<Type, TStateBase> states) =>
-            States = states;
-        
         public void SetStates(List<TStateBase> states) 
         {
             States = new ();

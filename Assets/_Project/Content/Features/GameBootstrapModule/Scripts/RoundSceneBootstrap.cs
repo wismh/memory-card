@@ -11,14 +11,11 @@ namespace Project.Features.GameBootstrapModule
     {
         private BoardComposer _boardComposer;
         private LevelContext _levelContext;
-        private GameFlowStateMachine _gameFlowStateMachine;
         
         [Inject]
         public void InjectDependencies(BoardComposer boardComposer,
-                                       LevelContext levelContext,
-                                       GameFlowStateMachine gameFlowStateMachine)
+                                       LevelContext levelContext)
         {
-            _gameFlowStateMachine = gameFlowStateMachine;
             _boardComposer = boardComposer;
             _levelContext = levelContext;
         }
@@ -26,7 +23,6 @@ namespace Project.Features.GameBootstrapModule
         private void Start()
         {
             _boardComposer.Compose(_levelContext.LevelConfig.CardCount);
-            _gameFlowStateMachine.Enter<RoundFlowState>();
             _levelContext.LevelStartTime = Time.time;
         }
     }

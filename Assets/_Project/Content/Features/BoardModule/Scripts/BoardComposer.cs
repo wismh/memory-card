@@ -9,16 +9,19 @@ namespace Project.Features.BoardModule
     public class BoardComposer
     {
         private readonly BoardView _boardView;
+        private readonly BoardPresenter _boardPresenter;
         private readonly CardFactory _cardFactory;
         private readonly BoardComposerConfig _config;
         
         public BoardComposer(BoardView boardView,
                              CardFactory cardFactory,
+                             BoardPresenter boardPresenter,
                              BoardComposerConfig config)
         {
             _config = config;
             _boardView = boardView;
             _cardFactory = cardFactory;
+            _boardPresenter = boardPresenter;
         }
 
         public void Compose(int cardCount)
@@ -46,7 +49,7 @@ namespace Project.Features.BoardModule
             foreach (var card in cards)
                 _boardView.AddCard(card);
             
-            _boardView.Configure(cardCount);
+            _boardPresenter.Configure(cardCount);
         }
     }
 }

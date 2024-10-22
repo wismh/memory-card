@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 
 using Project.Features.CardModule;
+using UnityEngine;
 
 namespace Project.Features.BoardModule
 {
@@ -9,9 +11,13 @@ namespace Project.Features.BoardModule
     {
         private readonly BoardView _view;
         private readonly BoardPresenterConfig _config;
-        private readonly List<CardView> _openedCards = new();
         
         private readonly List<CardView> _currentPair = new(2);
+        private readonly List<CardView> _openedCards = new();
+
+        private int _cardCount;
+        
+        public event Action OnBoardComplete;
         
         public BoardPresenter(BoardPresenterConfig config,
                               BoardView view)
@@ -25,6 +31,13 @@ namespace Project.Features.BoardModule
         ~BoardPresenter()
         {
             _view.OnCardClick -= HandleCardClick;
+        }
+
+        public void Configure(int cardCount)
+        {
+            _cardCount = cardCount;
+            _openedCards.Capacity = cardCount;
+            _view.Configure(cardCount);
         }
         
         private void HandleCardClick(CardView view)
@@ -57,7 +70,11 @@ namespace Project.Features.BoardModule
             await UniTask.Delay(_config.DelayBeforeMatch);
 
             if (_currentPair[0].CardType.Id == _currentPair[1].CardType.Id)
+            {
                 _openedCards.AddRange(_currentPair);
+                if (_openedCards.Count == _cardCount)
+                    OnBoardComplete?.Invoke();
+            }
             else
             {
                 _currentPair[0].CardModel.IsOpened = false;
