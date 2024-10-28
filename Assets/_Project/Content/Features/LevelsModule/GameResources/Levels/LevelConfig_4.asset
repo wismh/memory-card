@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc7d053f11948998254a8163f9ea596, type: 3}
   m_Name: LevelConfig_4
   m_EditorClassIdentifier: Assembly-CSharp::Project.Features.LevelsModule.LevelConfig
-  <CardCount>k__BackingField: 33
+  <CardCount>k__BackingField: 32
