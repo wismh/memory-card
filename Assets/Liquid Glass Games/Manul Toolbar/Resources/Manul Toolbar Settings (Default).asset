@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8954906cac5624daa0c6acdd895593, type: 3}
+  m_Name: Manul Toolbar Settings (Default)
+  m_EditorClassIdentifier: 
+  settingsExpanded: 0
+  currentVersion: 
+  settings:
+    leftBeginOffset: 10
+    rightBeginOffset: -5
+    betweenOffset: 5
+    defaultButtonStyle: 18
+    defaultToggleStyle: 37
+    defaultLabelStyle: 13
+    defaultPopupStyle: 29
+    defaultNumberStyle: 33
+    defaultTextStyle: 33
+    showConsoleMessages: 1
+    disableToolbar: 0
+    mutedColor: {r: 1, g: 1, b: 1, a: 0.6}
+    overrideLeftType: 0
+    SOForLeftSide: {fileID: 0}
+    SOSetForLeftSide: {fileID: 0}
+    overrideRightType: 0
+    SOForRightSide: {fileID: 0}
+    SOSetForRightSide: {fileID: 0}
+  leftSide: []
+  rightSide:
+  - isActive: 1
+    isExpanded: 0
+    type: 1
+    labelType: 0
+    labelText: Toolbar
+    labelIcon: {fileID: 0}
+    labelIconUsePath: 0
+    labelIconPath: 
+    useStyle: 0
+    editorStyle: 0
+    styleName: Style Name
+    skin: {fileID: 0}
+    useWidth: 0
+    width: 25
+    useColors: 0
+    globalColor: {r: 1, g: 0, b: 0, a: 1}
+    contentColor: {r: 0.03184688, g: 1, b: 0, a: 1}
+    backgroundColor: {r: 0, g: 0.041553974, b: 1, a: 1}
+    useTooltip: 1
+    linesCount: 2
+    labelTooltip: Opens the Manul Toolbar Settings asset in which you can add, remove,
+      and modify your toolbar buttons.
+    togglePrefName: 
+    actions:
+    - mouseButton: 0
+      keyboardButton: 0
+      buttonType: 5
+      buttonObject: {fileID: 11400000}
+      buttonEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      objectName: 
+      className: Manul.Toolbar.ManulToolbar
+      methodName: FindManulToolbar
+      listActionName: 
+      isPartOfList: 0
+    - mouseButton: 0
+      keyboardButton: 0
+      buttonType: 4
+      buttonObject: {fileID: 0}
+      buttonEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      objectName: 
+      className: 
+      methodName: 
+      listActionName: 
+      isPartOfList: 0
+    showNameField: 0
+    intNamesList: []
+    useOnChangeActions: 0
+    numberType: 0
+    sliderIntMin: 0
+    sliderIntMax: 0
+    sliderFloatMin: 0
+    sliderFloatMax: 0
+    otherType: 0
+    defaultSliderValue: 0
+    defaultSliderValueInt: 0
+    useOtherLabel: 0
+    useResetButton: 0
+    currentFrameRate: 0

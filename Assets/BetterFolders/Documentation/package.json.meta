@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 35d58ddd7ec3d7945876e957aa6532f3
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 311261
+  packageName: Better Folders
+  packageVersion: 1.0
+  assetPath: Assets/BetterFolders/Documentation/package.json
+  uploadId: 733772

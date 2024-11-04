@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab24426b5e7a51049863590cee10ea0c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 278332
+  packageName: MANUL Toolbar
+  packageVersion: 1.4.0
+  assetPath: Assets/Liquid Glass Games/Manul Toolbar/Documentation/Manul Toolbar
+    - User Guide.pdf
+  uploadId: 750317

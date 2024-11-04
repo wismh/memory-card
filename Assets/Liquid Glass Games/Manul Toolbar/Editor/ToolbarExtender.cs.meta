@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4b5c0aaa5db1d70429862f1af59b128b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 278332
+  packageName: MANUL Toolbar
+  packageVersion: 1.4.0
+  assetPath: Assets/Liquid Glass Games/Manul Toolbar/Editor/ToolbarExtender.cs
+  uploadId: 750317
