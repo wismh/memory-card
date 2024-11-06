@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47904cc4d2b4429b52d7869230e679c, type: 3}
+  m_Name: CardType_15
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.CardModule.CardType
+  <Id>k__BackingField: card_15
+  <FrontSprite>k__BackingField: {fileID: 21300000, guid: bf6e28281e26ff144b454bb231cc6ad5, type: 3}
