@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3e405f6b89408185e6f4925aae282e, type: 3}
   m_Name: CardViewConfig_Default
   m_EditorClassIdentifier: Assembly-CSharp::Project.Features.CardModule.CardFlipAnimationConfig
-  <Duration>k__BackingField: 1
+  <Duration>k__BackingField: 0.4
   <BackSideSprite>k__BackingField: {fileID: 21300000, guid: ee5397425f5b8bd4ea3804e86c78d56f, type: 3}
