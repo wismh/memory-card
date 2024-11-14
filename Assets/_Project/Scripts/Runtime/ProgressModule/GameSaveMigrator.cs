@@ -1,3 +1,5 @@
+using System;
+
 namespace Project.Features.ProgressModule
 {
     public static class GameSaveMigrator
@@ -7,7 +9,7 @@ namespace Project.Features.ProgressModule
             if (data == null)
                 return CreateDefault();
 
-            data.completedLevelIds ??= new System.Collections.Generic.List<string>();
+            data.completedLevelIds ??= Array.Empty<string>();
 
             while (data.version < GameSaveVersion.Current)
             {
@@ -31,7 +33,7 @@ namespace Project.Features.ProgressModule
             return new GameSaveData
             {
                 version = GameSaveVersion.Current,
-                completedLevelIds = new System.Collections.Generic.List<string>()
+                completedLevelIds = Array.Empty<string>()
             };
         }
     }

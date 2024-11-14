@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Project.Features.ProgressModule
 {
@@ -7,9 +6,6 @@ namespace Project.Features.ProgressModule
     public class GameSaveData
     {
         public int version = GameSaveVersion.Current;
-
-        public List<string> completedLevelIds = new();
-
-        public string reservedExtensionJson;
+        public string[] completedLevelIds = Array.Empty<string>();
     }
 }

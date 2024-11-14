@@ -24,7 +24,7 @@ namespace Project.Features.ProgressModule
                 if (data == null)
                     return false;
 
-                data.completedLevelIds ??= new System.Collections.Generic.List<string>();
+                data.completedLevelIds ??= System.Array.Empty<string>();
                 return true;
             }
             catch (IOException)
@@ -35,8 +35,7 @@ namespace Project.Features.ProgressModule
 
         public void Save(GameSaveData data)
         {
-            if (data.completedLevelIds == null)
-                data.completedLevelIds = new System.Collections.Generic.List<string>();
+            data.completedLevelIds ??= System.Array.Empty<string>();
 
             var json = JsonUtility.ToJson(data, true);
             File.WriteAllText(FilePath, json);

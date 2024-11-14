@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Project.Features.LevelsModule
@@ -8,8 +8,16 @@ namespace Project.Features.LevelsModule
     public class LevelsDb : ScriptableObject
     {
         [SerializeField] private List<LevelConfig> _levelConfigs;
-        
+
         public IReadOnlyList<LevelConfig> LevelConfigs =>
             _levelConfigs.AsReadOnly();
+
+        public int IndexOf(LevelConfig level)
+        {
+            if (level == null || _levelConfigs == null)
+                return -1;
+
+            return _levelConfigs.IndexOf(level);
+        }
     }
 }

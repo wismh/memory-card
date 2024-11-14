@@ -1,7 +1,7 @@
 using Project.Core.AssetLoaderModule;
 using Project.Core.SceneLoaderServiceModule;
 using Project.Features.GameFlowStateMachineModule;
-using Project.Features.LevelsModule;
+using Project.Features.ProgressModule;
 using UnityEngine;
 using Zenject;
 
@@ -13,8 +13,7 @@ namespace Project.Features.GameBootstrapModule
     {
         public override void InstallBindings()
         {
-            Container.Bind<LevelContext>().AsSingle();
-            
+            ProgressModuleInstaller.Install(Container);
             SceneLoaderServiceModuleInstaller.Install(Container);
             GameFlowStateMachineInstaller.Install(Container);
             AssetLoaderInstaller.Install(Container);
