@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385ce36b58974d659c9308529474eb05, type: 3}
   m_Name: LevelModuleInstaller_Default
   m_EditorClassIdentifier: Assembly-CSharp::Project.Features.LevelsModule.LevelModuleInstaller
-  _levels: {fileID: 11400000, guid: 778c8b54a35eefc4082c843411dc938a, type: 2}
+  _levelsDb: {fileID: 11400000, guid: 778c8b54a35eefc4082c843411dc938a, type: 2}
