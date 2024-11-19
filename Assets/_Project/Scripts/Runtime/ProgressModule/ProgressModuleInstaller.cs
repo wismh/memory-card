@@ -1,4 +1,4 @@
-﻿using Zenject;
+using Zenject;
 
 namespace Project.Features.ProgressModule
 {
@@ -13,6 +13,10 @@ namespace Project.Features.ProgressModule
             Container.BindInterfacesTo<LevelProgressService>()
                 .AsSingle()
                 .NonLazy();
+
+            Container.Bind<IMapAnimationIntent>()
+                .To<MapAnimationIntent>()
+                .AsSingle();
         }
     }
 }

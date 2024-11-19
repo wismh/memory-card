@@ -16,18 +16,24 @@ namespace Project.Features.GameFlowStateMachineModule
         private readonly LevelContext _levelContext;
         private readonly WonPopupPresenter _wonPopupPresenter;
         private readonly ILevelProgressService _levelProgress;
-        
+        private readonly LevelsDb _levelsDb;
+        private readonly IMapAnimationIntent _mapAnimationIntent;
+
         public GamePlayPresenter(GameFlowStateMachine gameFlowStateMachine,
                                  BoardPresenter boardPresenter,
                                  LevelContext levelContext,
                                  WonPopupPresenter wonPopupPresenter,
-                                 ILevelProgressService levelProgress)
+                                 ILevelProgressService levelProgress,
+                                 LevelsDb levelsDb,
+                                 IMapAnimationIntent mapAnimationIntent)
         {
             _gameFlowStateMachine = gameFlowStateMachine;
             _wonPopupPresenter = wonPopupPresenter;
             _boardPresenter = boardPresenter;
             _levelContext = levelContext;
             _levelProgress = levelProgress;
+            _levelsDb = levelsDb;
+            _mapAnimationIntent = mapAnimationIntent;
         }
         
         public void Initialize()
@@ -43,7 +49,15 @@ namespace Project.Features.GameFlowStateMachineModule
         private void HandleBoardComplete()
         {
             if (_levelContext.LevelConfig != null)
+            {
                 _levelProgress.RecordLevelCompleted(_levelContext.LevelConfig);
+
+                var completedIndex = _levelsDb.IndexOf(_levelContext.LevelConfig);
+                if (completedIndex >= 0)
+                    _mapAnimationIntent.QueueAnimationAfterStageComplete(
+                        completedIndex,
+                        _levelsDb.LevelConfigs.Count);
+            }
 
             var result = new LevelResult()
             {
