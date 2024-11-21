@@ -72,8 +72,8 @@ MonoBehaviour:
     materialColor: 0
   - folderName: Fonts
     folderColor: {r: 0.1137255, g: 0.30588236, b: 0.8470589, a: 1}
-    fullPath: 
-    icon: {fileID: 2800000, guid: 534866551139bc64bb08511b5254f927, type: 3}
+    fullPath: Assets/_Project/Fonts
+    icon: {fileID: 0}
     applyToAllFolders: 1
     applyColorToSubfolders: 1
     applyIconToSubfolders: 0
