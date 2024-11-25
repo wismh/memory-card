@@ -222,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443898486345326671}
   - component: {fileID: 9098456627967624794}
+  - component: {fileID: 9081903786430664042}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -294,3 +295,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9081903786430664042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8352204046676932770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961717aadd556d04b9587b626728d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.PlaySoundOnButtonClick
+  _audioPlayer: {fileID: 0}
+  _soundAsset: {fileID: 11400000, guid: 9cecc6945784d4c47a0f09e94d67f3fe, type: 2}
+  _button: {fileID: 9098456627967624794}

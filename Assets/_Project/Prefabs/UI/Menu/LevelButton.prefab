@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5451899397705012653}
   - component: {fileID: 3706866702720056645}
+  - component: {fileID: 751866163820037064}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -171,3 +172,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
   _button: {fileID: 5466709314565863029}
   _linkedLevelIndex: 0
+  _lockVisual: {fileID: 0}
+--- !u!114 &751866163820037064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4272971930074263343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961717aadd556d04b9587b626728d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.PlaySoundOnButtonClick
+  _audioPlayer: {fileID: 0}
+  _soundAsset: {fileID: 11400000, guid: 9cecc6945784d4c47a0f09e94d67f3fe, type: 2}
+  _button: {fileID: 5466709314565863029}
