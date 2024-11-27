@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Time: 0:00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
-  m_sharedMaterial: {fileID: -1516631760651259828, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
+  m_sharedMaterial: {fileID: -1073379579228254680, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -317,8 +317,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
-  m_sharedMaterial: {fileID: -1516631760651259828, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
+  m_sharedMaterial: {fileID: -1073379579228254680, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1174,8 +1174,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Completed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
-  m_sharedMaterial: {fileID: -1516631760651259828, guid: e79dfc8b8e2c05b428bce05f00f69684, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
+  m_sharedMaterial: {fileID: -1073379579228254680, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1594,6 +1594,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Back to map
       objectReference: {fileID: 0}
+    - target: {fileID: 7397360816761100674, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1073379579228254680, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
     - target: {fileID: 8187056355605602622, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
@@ -2142,6 +2146,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 443898486345326671, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397360816761100674, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1073379579228254680, guid: 01c14a351efde0f4880761fa1fc597ba, type: 2}
+    - target: {fileID: 7397360816761100674, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8352204046676932770, guid: d2c49487d7117f841aa48cb117843ae0, type: 3}
