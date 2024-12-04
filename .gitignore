@@ -13,9 +13,14 @@ Thumbs.db
 
 *.csproj
 *.sln
+*.DotSettings
+*.DotSettings.user
+*.user
 .vsconfig
 
 .vs/
+.idea/
+.vscode/
 obj/
 
 *.png~
@@ -32,7 +37,17 @@ obj/
 /[Cc]odeCoverage/
 Keystore/
 
-/.idea/
-/.vscode/
-
 Assets/GooglePlayGames/com.google.play.games/Editor/
+
+# Documentation
+Docs/
+docs/
+
+# AI Assistants / Agents
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+.agents/
+.agent/
+.claude/
+.gemini/
