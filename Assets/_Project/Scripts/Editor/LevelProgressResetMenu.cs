@@ -1,4 +1,5 @@
 using System.IO;
+using Lumenwake;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ namespace Project.Features.ProgressModule.Editor
             if (File.Exists(path))
                 File.Delete(path);
 
-            Debug.Log($"Level progress cleared. Save file removed if present: {path}");
+            LoggingSystem.Log($"Level progress cleared. Save file removed if present: {path}");
         }
     }
 }

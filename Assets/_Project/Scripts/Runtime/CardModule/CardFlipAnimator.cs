@@ -1,4 +1,5 @@
-﻿using PrimeTween;
+﻿using Lumenwake;
+using PrimeTween;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ namespace Project.Features.CardModule
         {
             if (_rectTransform == null)
             {
-                Debug.LogError("CardFlipAnimator: Image not set");
+                LoggingSystem.LogError("CardFlipAnimator: Image not set");
                 return;
             }
 
