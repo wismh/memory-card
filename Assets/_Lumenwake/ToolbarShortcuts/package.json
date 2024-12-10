@@ -1,0 +1,24 @@
+{
+  "name": "com.lumenwake.toolbar-shortcuts",
+  "displayName": "Toolbar Shortcuts",
+  "version": "1.0.0",
+  "unity": "6000.3",
+  "unityRelease": "0f1",
+  "description": "Custom Unity 6.3 main toolbar: bootstrap Play workflow and configurable toolbar shortcuts with a Shortcuts Window panel.",
+  "keywords": [
+    "toolbar",
+    "shortcuts",
+    "editor",
+    "productivity",
+    "play mode",
+    "bootstrap"
+  ],
+  "category": "Editor",
+  "type": "tool",
+  "author": {
+    "name": "Lumenwake",
+    "email": "support@lumenwake.com",
+    "url": "https://lumenwake.com"
+  },
+  "dependencies": {}
+}

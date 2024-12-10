@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ff90b8decb27a4e83cd9e770dcd6f3, type: 3}
+  m_Name: ToolbarShortcutsConfig
+  m_EditorClassIdentifier: Lumenwake.ToolbarShortcuts.Editor::ToolbarShortcuts.Editor.ToolbarShortcutsConfig
+  leftMargin: 1
+  rightMargin: 1
+  windowColumns: 1
+  shortcuts:
+  - _foldout: 0
+    enabled: 1
+    label: Bootstrap
+    tooltip: Open Bootstrap Scene
+    placement: 0
+    dock: 0
+    order: 0
+    icon: {fileID: 0}
+    actionType: 2
+    asset: {fileID: 0}
+    primaryScene: {fileID: 102900000, guid: d318c95a94f4734468f7dad438a4174c, type: 3}
+    additiveScenes: []
+    windowOpenKind: 0
+    windowTarget: 0
+    menuPath: 
+    staticTypeName: 
+    staticMethodName: 
+  - _foldout: 0
+    enabled: 1
+    label: Round Scene
+    tooltip: Open Round Scene
+    placement: 0
+    dock: 0
+    order: 1
+    icon: {fileID: 0}
+    actionType: 2
+    asset: {fileID: 0}
+    primaryScene: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    additiveScenes: []
+    windowOpenKind: 0
+    windowTarget: 0
+    menuPath: 
+    staticTypeName: 
+    staticMethodName: 
+  - _foldout: 0
+    enabled: 1
+    label: Project Context
+    tooltip: Select ProjectContext prefab
+    placement: 1
+    dock: 1
+    order: 0
+    icon: {fileID: 0}
+    actionType: 0
+    asset: {fileID: 496809949557089295, guid: b773f3ebc067ce2468eb054205fe7570, type: 3}
+    primaryScene: {fileID: 0}
+    additiveScenes: []
+    windowOpenKind: 0
+    windowTarget: 0
+    menuPath: 
+    staticTypeName: 
+    staticMethodName: 
