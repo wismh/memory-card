@@ -7,12 +7,10 @@ namespace Project.Features.ProgressModule.Editor
 {
     public static class LevelProgressResetMenu
     {
-        private const string FileName = "game_progress.json";
-
         [MenuItem("Tools/Progress/Reset Level Progress")]
         public static void ResetLevelProgress()
         {
-            var path = Path.Combine(Application.persistentDataPath, FileName);
+            var path = Path.Combine(Application.persistentDataPath, ProgressModuleInstaller.SaveFileName);
             if (File.Exists(path))
                 File.Delete(path);
 

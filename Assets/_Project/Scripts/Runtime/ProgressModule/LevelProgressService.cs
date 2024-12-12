@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Project.Core.SaveServiceModule;
 using Project.Features.LevelsModule;
 using Zenject;
 
@@ -8,17 +9,17 @@ namespace Project.Features.ProgressModule
     public class LevelProgressService : ILevelProgressService, IInitializable
     {
         private readonly LevelsDb _levelsDb;
-        private readonly IGameSavePersistence _persistence;
+        private readonly ISaveService<GameSaveData> _saveService;
 
         private GameSaveData _data;
         private readonly HashSet<string> _completedIds = new();
 
         public event Action ProgressChanged;
 
-        public LevelProgressService(LevelsDb levelsDb, IGameSavePersistence persistence)
+        public LevelProgressService(LevelsDb levelsDb, ISaveService<GameSaveData> saveService)
         {
             _levelsDb = levelsDb;
-            _persistence = persistence;
+            _saveService = saveService;
         }
 
         void IInitializable.Initialize()
@@ -66,21 +67,17 @@ namespace Project.Features.ProgressModule
 
         public void ResetProgress()
         {
-            _data = GameSaveMigrator.CreateDefault();
+            _data.completedLevelIds = Array.Empty<string>();
             RebuildCompletedCache();
-            _persistence.Save(_data);
+            _saveService.SaveImmediate();
             ProgressChanged?.Invoke();
         }
 
         private void LoadOrCreate()
         {
-            if (_persistence.TryLoad(out var loaded))
-                _data = GameSaveMigrator.MigrateToCurrent(loaded);
-            else
-                _data = GameSaveMigrator.CreateDefault();
-
+            _data = _saveService.Load();
+            _data.completedLevelIds ??= Array.Empty<string>();
             RebuildCompletedCache();
-            _persistence.Save(_data);
         }
 
         private void RebuildCompletedCache()
@@ -98,11 +95,10 @@ namespace Project.Features.ProgressModule
 
         private void Persist()
         {
-            _data.version = GameSaveVersion.Current;
             var arr = new string[_completedIds.Count];
             _completedIds.CopyTo(arr, 0);
             _data.completedLevelIds = arr;
-            _persistence.Save(_data);
+            _saveService.SaveImmediate();
         }
     }
 }
