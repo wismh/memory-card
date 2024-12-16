@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+using Lumenwake.UIModule;
 using Project.Features.BoardModule;
 using Project.Features.HudModule;
 using Project.Features.LevelsModule;
@@ -9,12 +11,13 @@ using UnityEngine;
 
 namespace Project.Features.GameFlowStateMachineModule
 {
-    public class GamePlayPresenter : IInitializable, IDisposable 
+    public class GamePlayPresenter : IInitializable, IDisposable
     {
         private readonly BoardPresenter _boardPresenter;
         private readonly GameFlowStateMachine _gameFlowStateMachine;
         private readonly LevelContext _levelContext;
         private readonly WonPopupPresenter _wonPopupPresenter;
+        private readonly IScreenManager _screenManager;
         private readonly ILevelProgressService _levelProgress;
         private readonly LevelsDb _levelsDb;
         private readonly IMapAnimationIntent _mapAnimationIntent;
@@ -23,12 +26,14 @@ namespace Project.Features.GameFlowStateMachineModule
                                  BoardPresenter boardPresenter,
                                  LevelContext levelContext,
                                  WonPopupPresenter wonPopupPresenter,
+                                 IScreenManager screenManager,
                                  ILevelProgressService levelProgress,
                                  LevelsDb levelsDb,
                                  IMapAnimationIntent mapAnimationIntent)
         {
             _gameFlowStateMachine = gameFlowStateMachine;
             _wonPopupPresenter = wonPopupPresenter;
+            _screenManager = screenManager;
             _boardPresenter = boardPresenter;
             _levelContext = levelContext;
             _levelProgress = levelProgress;
@@ -65,6 +70,7 @@ namespace Project.Features.GameFlowStateMachineModule
             };
             
             _wonPopupPresenter.Show(result);
+            _screenManager.OpenScreen<WonPopupPresenter>().Forget();
         }
     }
 }
