@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef20011f9d684fb48ba42f07dd0ea28a, type: 3}
   m_Name: LevelsDb_Default
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.LevelsModule.LevelsDb
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Levels.LevelsDb
   _levelConfigs:
   - {fileID: 11400000, guid: 5426d3dae5538344194edb9b58ed609b, type: 2}
   - {fileID: 11400000, guid: b9e4326fc8cc71a41b10e07b1ccc7227, type: 2}

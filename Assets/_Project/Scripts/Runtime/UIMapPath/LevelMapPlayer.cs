@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Project.Features.UIMapPath
+namespace Project.UIMapPath
 {
     [DisallowMultipleComponent]
     public class LevelMapPlayer : MonoBehaviour

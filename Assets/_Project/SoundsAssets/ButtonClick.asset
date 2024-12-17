@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fb70d698768480fa98e424150026b39, type: 3}
   m_Name: ButtonClick
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.SoundAsset
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.SoundAsset
   <Clip>k__BackingField: {fileID: 8300000, guid: 9c0a02ca19c74b0468e6e33057405147, type: 3}
   <Volume>k__BackingField: 0.3

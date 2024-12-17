@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82dedbff7df96b542a1383d7d85bcfb1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.UIMapPath.LevelMapPath
+  m_EditorClassIdentifier: Assembly-CSharp::Project.UIMapPath.LevelMapPath
   _waypoints:
   - position: {x: -764.17456, y: 188.11829}
     handleIn: {x: -40, y: -0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3ef2571ba754ae4bb558528d980bcd5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelMapProgressPresenter
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelMapProgressPresenter
   _player: {fileID: 2080341261}
 --- !u!1 &117632487
 GameObject:
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!1001 &357945850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!1001 &384334578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!224 &465181498 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5451899397705012653, guid: e96e26693b9aae24f82c4316cd3fb9d7, type: 3}
@@ -856,7 +856,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!1 &522254636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!1 &1533450117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a5bd7474666430d868e6b21e12b2e0d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.AudioPlayer
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.AudioPlayer
   _audioSource: {fileID: 1723026967}
 --- !u!4 &1723026969
 Transform:
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64fba98af95b4a56892277e2077c47f9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectPresenter
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectPresenter
   _levelSelectViews:
   - {fileID: 2252894959892340619}
   - {fileID: 1198419097}
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43958e4e9e83b184d88bebc7e70469fc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.UIMapPath.LevelMapPlayer
+  m_EditorClassIdentifier: Assembly-CSharp::Project.UIMapPath.LevelMapPlayer
   _path: {fileID: 102666091}
   _playerIcon: {fileID: 2080341258}
   _snapToLevelNodeAtEnd: 1
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.MenuModule.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

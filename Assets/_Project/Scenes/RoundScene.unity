@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01858450283d4f479209a1b754f00a30, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.TimerPresenter
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Hud.TimerPresenter
   _timerView: {fileID: 149476559}
 --- !u!114 &149476559
 MonoBehaviour:
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eae025beb9e40da9b06e4369937bba4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.TimerView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Hud.TimerView
   _timerLabel: {fileID: 149476556}
 --- !u!1 &275428895
 GameObject:
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 275428896}
   - component: {fileID: 275428897}
   m_Layer: 0
-  m_Name: HudModuleInstaller
+  m_Name: HudInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcedf0e11276424bb4636fc81ba536ca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_Project.Content.Features.HudModule.Scripts.HudModuleInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::_Project.Content.Features.HudModule.Scripts.HudInstaller
   _wonPopupPresenter: {fileID: 933141816}
 --- !u!1 &361440017
 GameObject:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a5bd7474666430d868e6b21e12b2e0d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.AudioPlayer
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.AudioPlayer
   _audioSource: {fileID: 361440018}
 --- !u!4 &361440020
 Transform:
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0af4f2a161bb43478de76971d74a397d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.WonPopupPresenter
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Hud.WonPopupPresenter
   _view: {fileID: 933141817}
 --- !u!114 &933141817
 MonoBehaviour:
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 773f3c69911d45cf953b18ce3d47b250, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.WonPopupView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Hud.WonPopupView
   _retryButton: {fileID: 2085292268}
   _goBackButton: {fileID: 1685296554}
   _timeLabel: {fileID: 74259488}
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 1063165399}
   - component: {fileID: 1063165400}
   m_Layer: 0
-  m_Name: GamePlayModuleInstaller
+  m_Name: GamePlayInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52af53b7759479f80f0def1fbbc1d78, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.CardModule.GamePlayModuleInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::Project.GamePlay.GamePlayInstaller
 --- !u!1 &1218631436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29c614469ffa4e3b8e2dcd077b739a0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.HudModule.BackPresenter
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Hud.BackPresenter
   _backButton: {fileID: 408408351}
 --- !u!114 &1617125014
 MonoBehaviour:
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 961717aadd556d04b9587b626728d9e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.PlaySoundOnButtonClick
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.PlaySoundOnButtonClick
   _audioPlayer: {fileID: 361440019}
   _soundAsset: {fileID: 11400000, guid: 9cecc6945784d4c47a0f09e94d67f3fe, type: 2}
   _button: {fileID: 408408351}
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32471c4b24dd40df8747b0c78c2dc209, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.GameBootstrapModule.RoundSceneBootstrap
+  m_EditorClassIdentifier: Assembly-CSharp::Project.GameBootstrap.RoundSceneBootstrap
 --- !u!4 &1991456002
 Transform:
   m_ObjectHideFlags: 0

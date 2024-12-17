@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dc7d053f11948998254a8163f9ea596, type: 3}
   m_Name: LevelConfig_1
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.LevelsModule.LevelConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Levels.LevelConfig
   <CardCount>k__BackingField: 6

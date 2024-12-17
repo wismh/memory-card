@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Project.Features.UIMapPath
+namespace Project.UIMapPath
 {
     [ExecuteAlways]
     [RequireComponent(typeof(RectTransform))]

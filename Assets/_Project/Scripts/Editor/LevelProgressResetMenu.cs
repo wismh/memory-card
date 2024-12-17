@@ -3,14 +3,14 @@ using Lumenwake;
 using UnityEditor;
 using UnityEngine;
 
-namespace Project.Features.ProgressModule.Editor
+namespace Project.Progress.Editor
 {
     public static class LevelProgressResetMenu
     {
         [MenuItem("Tools/Progress/Reset Level Progress")]
         public static void ResetLevelProgress()
         {
-            var path = Path.Combine(Application.persistentDataPath, ProgressModuleInstaller.SaveFileName);
+            var path = Path.Combine(Application.persistentDataPath, ProgressInstaller.SaveFileName);
             if (File.Exists(path))
                 File.Delete(path);
 

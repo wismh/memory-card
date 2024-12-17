@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e47904cc4d2b4429b52d7869230e679c, type: 3}
   m_Name: CardType_10
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.CardModule.CardType
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Card.CardType
   <Id>k__BackingField: card_10
   <FrontSprite>k__BackingField: {fileID: 21300000, guid: 3f5d9afd1fdc6c6478e5e05dbd3f1670, type: 3}

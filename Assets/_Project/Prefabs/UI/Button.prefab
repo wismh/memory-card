@@ -306,7 +306,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 961717aadd556d04b9587b626728d9e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.PlaySoundOnButtonClick
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.PlaySoundOnButtonClick
   _audioPlayer: {fileID: 0}
   _soundAsset: {fileID: 11400000, guid: 9cecc6945784d4c47a0f09e94d67f3fe, type: 2}
   _button: {fileID: 9098456627967624794}

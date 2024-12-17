@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Project.Features.UIMapPath
+namespace Project.UIMapPath
 {
     public static class BezierMath
     {

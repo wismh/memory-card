@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48828c559e2a40be8c45f0527204486d, type: 3}
   m_Name: BoardComposerConfig_Default
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.BoardModule.BoardComposerConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Board.BoardComposerConfig
   <Types>k__BackingField:
   - {fileID: 11400000, guid: 6f8019542934fbc488dfd0b3673f50f6, type: 2}
   - {fileID: 11400000, guid: 352d4c6fb83490d4898a65abb444a6ee, type: 2}

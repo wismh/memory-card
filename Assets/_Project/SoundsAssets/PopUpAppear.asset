@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fb70d698768480fa98e424150026b39, type: 3}
   m_Name: PopUpAppear
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.SoundModule.SoundAsset
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Sound.SoundAsset
   <Clip>k__BackingField: {fileID: 8300000, guid: 92b6c2558e87dbc43aa49c3364c651e8, type: 3}
   <Volume>k__BackingField: 1

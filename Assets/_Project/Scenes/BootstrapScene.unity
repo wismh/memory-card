@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccbd64a0cc2b477b90e1c3322b7b8790, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.GameBootstrapModule.GlobalSceneBootstrap
+  m_EditorClassIdentifier: Assembly-CSharp::Project.GameBootstrap.GlobalSceneBootstrap
 --- !u!4 &1757246979
 Transform:
   m_ObjectHideFlags: 0

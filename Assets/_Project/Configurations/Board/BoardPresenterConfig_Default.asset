@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 912d0ef6c8404efa9e6f2f15b76044b8, type: 3}
   m_Name: BoardPresenterConfig_Default
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.BoardModule.BoardPresenterConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Board.BoardPresenterConfig
   <DelayBeforeMatch>k__BackingField: 1100

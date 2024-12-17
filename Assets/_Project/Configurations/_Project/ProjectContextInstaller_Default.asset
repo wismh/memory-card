@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 537e1c35160a46f0b5dc776987598d77, type: 3}
   m_Name: ProjectContextInstaller_Default
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Features.GameBootstrapModule.ProjectContextInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::Project.GameBootstrap.ProjectContextInstaller
   _levelsDb: {fileID: 11400000, guid: 778c8b54a35eefc4082c843411dc938a, type: 2}

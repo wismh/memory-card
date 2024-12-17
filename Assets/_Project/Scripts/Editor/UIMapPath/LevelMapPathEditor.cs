@@ -1,8 +1,8 @@
-using Project.Features.UIMapPath;
+using Project.UIMapPath;
 using UnityEditor;
 using UnityEngine;
 
-namespace Project.Features.UIMapPath.Editor
+namespace Project.UIMapPath.Editor
 {
     [CustomEditor(typeof(LevelMapPath))]
     public class LevelMapPathEditor : UnityEditor.Editor

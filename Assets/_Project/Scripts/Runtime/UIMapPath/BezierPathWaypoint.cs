@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Project.Features.UIMapPath
+namespace Project.UIMapPath
 {
     [Serializable]
     public class BezierPathWaypoint
