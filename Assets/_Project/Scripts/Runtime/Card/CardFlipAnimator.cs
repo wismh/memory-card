@@ -1,5 +1,5 @@
-﻿using Lumenwake;
-using PrimeTween;
+using DG.Tweening;
+using Lumenwake;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,13 +11,13 @@ namespace Project.Card
         private RectTransform _rectTransform;
 
         private Tween _tween;
-        
+
         public void SetImage(Image image)
         {
             _image = image;
             _rectTransform = image.rectTransform;
         }
-        
+
         public void Flip(Sprite sprite, float duration)
         {
             if (_rectTransform == null)
@@ -26,18 +26,19 @@ namespace Project.Card
                 return;
             }
 
-            _tween.Stop();
+            _tween?.Kill();
 
             float halfDuration = duration * 0.5f;
 
-            _tween = Tween
-                .ScaleX(_rectTransform, 0f, halfDuration, Ease.InQuad)
-                .OnComplete(() => 
+            _tween = _rectTransform
+                .DOScaleX(0f, halfDuration)
+                .SetEase(Ease.InQuad)
+                .OnComplete(() =>
                 {
                     _image.sprite = sprite;
-                    _tween = Tween.ScaleX(
-                        _rectTransform, 1f, halfDuration, Ease.OutQuad
-                    );
+                    _tween = _rectTransform
+                        .DOScaleX(1f, halfDuration)
+                        .SetEase(Ease.OutQuad);
                 });
         }
     }
