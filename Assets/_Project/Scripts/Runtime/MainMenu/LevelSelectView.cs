@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.Menu
+namespace Project.MainMenu
 {
     public class LevelSelectView : MonoBehaviour
     {

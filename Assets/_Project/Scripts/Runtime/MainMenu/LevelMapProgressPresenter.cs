@@ -4,7 +4,7 @@ using Project.UIMapPath;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Menu
+namespace Project.MainMenu
 {
     public class LevelMapProgressPresenter : MonoBehaviour
     {

@@ -8,7 +8,7 @@ using Project.GameFlow;
 using Project.Levels;
 using Project.Progress;
 
-namespace Project.Menu
+namespace Project.MainMenu
 {
     public class LevelSelectPresenter : BaseScreen
     {

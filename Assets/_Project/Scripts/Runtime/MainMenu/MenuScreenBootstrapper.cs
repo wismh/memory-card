@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using Lumenwake.UIModule;
 using Zenject;
 
-namespace Project.Menu
+namespace Project.MainMenu
 {
     public class MenuScreenBootstrapper : IInitializable
     {

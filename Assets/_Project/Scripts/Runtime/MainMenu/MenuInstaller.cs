@@ -4,7 +4,7 @@ using Lumenwake.UIModule;
 using UnityEngine;
 using Zenject;
 
-namespace Project.Menu
+namespace Project.MainMenu
 {
     public class MenuInstaller : MonoInstaller
     {

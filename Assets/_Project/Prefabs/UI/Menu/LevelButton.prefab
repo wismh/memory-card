@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b6a3338fdcc4f2bb1833e5d38624105, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Project.Menu.LevelSelectView
+  m_EditorClassIdentifier: Assembly-CSharp::Project.MainMenu.LevelSelectView
   _button: {fileID: 5466709314565863029}
   _linkedLevelIndex: 0
   _lockVisual: {fileID: 0}
